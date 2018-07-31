@@ -14,7 +14,8 @@ header{
     justify-content: space-between;
     align-items: center;
     height: auto;
-    background: rgb(9, 116, 36);
+    /* background: rgb(9, 116, 36); */
+    background: slateblue;
 }
 nav{
     display: flex;
