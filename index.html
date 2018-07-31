@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>task.list.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/app.css"/>
+</head>
+<body>
+
+<header>
+   <img src="images/logo.png" alt="logotipo">
+    <nav>
+        
+            <a href="#funcionalidad">¿cómo funciona?</a>
+            <a href="#comenzar">hacer nueva lista</a>
+        
+    </nav>
+</header>
+
+<!-- descripcion -->
+<section class="descripcion">
+   
+        <h1>Crea una lista de tareas</h1>
+        <p>coloca en ella todo lo que debas hacer</p>
+    
+</section>
+
+<!-- funcionalidad -->
+<section class="funcionalidad" id="funcionalidad">
+    <div class="contenido">
+        <h1>Como crear listas y por qué</h1>
+        <p>&nbsp;&nbsp;Ingresa una <b>nueva lista de tareas</b> en la parte derecha e incluyele tareas especificas en la parte izquierda.</p>
+        <p>&nbsp;&nbsp;Por ejemplo: en la parte <b>derecha</b> puedes colocar la tarea principal <i>"fiesta de cumpleaños"</i> , y en la parte <b>izquierda</b> las tareas especificas
+        como <i>"comprar pastel"</i>, <i>"inflar globos"</i> , <i>"hacer invitaciones"</i> , etc...  
+        </p>
+        <p>&nbsp;&nbsp;Puedes crear tantas listas de tareas como quieras</p>
+        <p>&nbsp;&nbsp;Ésto te sirve para organizar mejor tus tareas u obligaciones de una manera más controlada cuando estés navegando por internet </p>
+
+    </div>
+</section>
+
+<div id="comenzar">
+    <div class="contenedorPrincipal"  >
+        
+        <!-- contenedor columna de tareas especificas -->
+       
+            <div class="abuelo">
+                <input type="text" class="inputs" id="input" placeholder="añade la tarea especifica">
+                <ul id="taskContainer"></ul>
+            </div>
+            <div class="listasPrincipales">
+                <input class="inputs" type="text" id="nuevaLista" placeholder="crea tu nueva lista de tareas">
+                <div id="contenedorListas"></div>
+            </div>
+        
+        
+</div>
+</div>
+
+<footer>
+    <img src="images/logo.png" alt="" class="imagen">
+    <div class="descripcion-footer">
+        <ul>
+            <li><a href="#">como se hizo ésta página?</a></li>
+            <li><a href="">Ve mi portafolio</a></li>
+        </ul>
+    </div>
+    <div class="contacto">
+        <p>mi correo:</p>
+        <a href="mailto:carlosmandolina@gmail.com">carlosmandolina@gmail.com</a>
+        <p>mi github</p>
+        <a href="#">enlace a github</a>
+    </div>
+    <p class="coR">hecho por: Carlos Martínez</p>
+</footer>
+    <script src="ecmas5/ready.js"></script>
+</body>
+</html>
