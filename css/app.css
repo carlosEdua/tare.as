@@ -15,6 +15,8 @@ header{
     align-items: center;
     height: auto;
     background: rgb(9, 116, 36);
+    /* background: #6a5acd; */
+
 }
 nav{
     display: flex;
@@ -41,7 +43,6 @@ header a{
 /* portada sencilla */
 
 .descripcion{
-    border: 1px solid red;
     text-align: center;
     height: 450px;
     display: flex;
@@ -52,7 +53,7 @@ header a{
     /* position: fixed; */
     /* width: 100%; */
     background-attachment: fixed;
-    
+
 }
 
  .descripcion h1{
@@ -63,15 +64,15 @@ header a{
      font-size: 25px;
  }
 
-/* como funciona */ 
+/* como funciona */
 
 .funcionalidad{
-    border: 1px solid blue;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px 0;
     min-height: 420px;
+    height: 100vh;
     background: rgb(55, 168, 55);
 }
 
@@ -112,9 +113,6 @@ header a{
     justify-items: center;
 }
 
-.listasPrincipales,.abuelo{
-    overflow: auto;
-}
 
 .tarea.complete{
     background: rgba(0, 0, 255, 0.356);
@@ -182,7 +180,7 @@ ul{
 }
 /* footer */
 footer{
-    background: rgb(11, 49, 6);
+    background: rgb(9, 116, 36);
     color: white;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -209,3 +207,118 @@ footer{
 /* footer:nth-of-type(1){
     align-items: flex-end;
 } */
+
+
+/* responsive ==========================================================
+========================================================================
+======================================================================== */
+
+/* tablets 800px */
+@media screen and (max-width: 800px){
+
+    /* header{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "imagenHeader imagenHeader";
+    grid-gap: 10px;
+    justify-items: center;
+    }
+    header nav{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "izqBoton derBoton";
+
+    } */
+
+            header{
+                display: flex;
+                flex-direction: column;
+
+            }
+    .imagenHeader{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "logo logo";
+    }
+    .logo{
+        grid-area: logo;
+        width: 290px;
+    }
+    .navegacionHeader{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: "izqBoton derBoton";
+        grid-gap: 10px;
+        justify-items: center;
+    }
+    .izqBoton{
+        grid-area: izqBoton;
+        padding: 16px 23px;
+
+    }
+    .derBoton{
+        grid-area: derBoton;
+        padding: 16px 23px;
+    }
+
+}
+
+/* telefonos y pantallas de 677px para abajo =========================*/
+
+@media screen and (max-width: 677px){
+
+.funcionalidad{
+    height: auto;
+}
+
+.contenedorPrincipal{
+    position: relative;
+    display: block;
+    margin-top: 0;
+}
+
+.listasPrincipales{
+    top: 0;
+    /* left: -100%; */
+    bottom: 0;
+    width: 70%;
+    /* position: absolute; */
+    transition: .4s;
+
+}
+    .abuelo input{
+    margin-top: 20px;
+    }
+#comenzar{
+    position: relative;
+}
+
+
+footer{
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,70px);
+    grid-gap: 12px;
+    justify-items: center;
+    align-items: center;
+    grid-template-areas: "descripcion-footer"
+                         "contacto"
+                         "imagen"
+                         "coR";
+
+}
+.imagen{
+ grid-area: imagen;
+}
+.descripcion-footer{
+    grid-area: descripcion-footer;
+}
+.contacto{
+    grid-area: contacto;
+}
+.coR{
+    grid-area: coR;
+}
+
+
+
+}
